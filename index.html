@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>responsive table practical</title>
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body {
+     margin: 10px;
+     background-image: linear-gradient(to bottom right, grey, #ffffaa, #f1f1f1);
+     background-repeat: no-repeat;
+     background-size: cover;
+     font-size: 100%;
+    }
+    h2 {
+      background-image: linear-gradient(to right, purple, pink);
+      -webkit-background-clip: text;
+      -webkit-color: transparent;
+      text-align: center;
+      font-size: 20px;
+    }
+      table, tr, th, td {
+        border: 1px solid black;
+        border-radius: 10px;
+      }
+      tr:hover {
+        padding: 15px;
+        font-weight: bold;
+      }
+      table {
+        width: 300px;
+        height: 300px;
+        max-width: 700px;
+        margin: 10px auto 10px auto;
+        box-shadow: 2px 2px 3px grey;
+      }
+      th {
+        text-align: left;
+        padding: 10px;
+        font-size: 16px;
+      }
+      .basic {
+        color: blue;
+      }
+      .pro {
+        color: darkblue;
+      }
+      .enter {
+        color: black;
+      }
+      .price {
+        font-weight: bold;
+        font-size: 14px;
+        padding: 5px 10px;
+      }
+      button {
+        width: 290px;
+        margin: auto;
+        border-radius: inherit;
+        border: none;
+        height: 35px;
+        background-image: linear-gradient(to bottom right, purple, pink);
+        color: white;
+        font-weight: bold;
+        box-shadow: 3px 3px 5px grey;
+        opacity: 0.4;
+        cursor: pointer;
+      }
+      .c {
+        background-image: linear-gradient(to right, navy, blue);
+        color: white;
+        opacity: 1;
+      }
+      .c:hover {
+        outline: 2px solid blue;
+        padding: 2px;
+        color: white;
+        opacity: 1;
+      }
+      button:hover {
+        opacity: 1;
+      }
+      .btn {
+        border: none;
+      }
+      @media screen and (min-width: 480px) {
+        .ctn {
+          display: flex;
+        }
+        th {
+          font-size: 20px;
+          background-color: lightgrey;
+        }
+        h2 {
+          font-size: 30px;
+        }
+        
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Pricing Packages</h2>
+    <div class="ctn">
+    <table>
+      <tr>
+        <th class="basic">Basic</th>
+      </tr>
+      <tr>
+        <td class="price">$100/Months</td>
+      </tr>
+      <tr>
+        <td><li>500mb Data</li></td>
+      </tr>
+      <tr>
+        <td><li>500 Airtime</li></td>
+      </tr>
+      <tr>
+        <td><li>5GB Storage</li></td>
+      </tr>
+      <tr>
+        <td><li>3GB Network</li></td>
+      </tr> 
+        <td><li>Limited</li></td>
+      </tr>
+      <tr> 
+        <td class="btn a"><button type="button" onclick="document.location='index1.html'">Sign up</button></td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <th class="pro">pro/6(six) Months</th>
+      </tr>
+      <tr>
+        <td class="price">$500</td>
+      </tr>
+      <tr>
+        <td><li>1GB Data</li></td>
+      </tr>
+      <tr>
+        <td><li>1000 Airtime</li></td>
+      </tr>
+      <tr>
+        <td><li>10GB Storage</li></td>
+      </tr>
+      <tr>
+        <td><li>4GB Network</li></td>
+      </tr> 
+        <td><li>Limited</li></td>
+      </tr>
+      <tr> 
+        <td class="btn b"><button type="button" onclick="document.location='index1.html'">Sign up</button></td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <th class="enter">Enterprise/Year</th>
+      </tr>
+      <tr>
+        <td class="price">$1000</td>
+      <tr>
+        <td><li>5GB Data</li></td>
+      </tr>
+      <tr>
+        <td><li>5000 Airtime</li></td>
+      </tr>
+      <tr>
+        <td><li>10GB Storage</li></td>
+      </tr>
+      <tr>
+        <td><li>5GB Network</li></td>
+      </tr> 
+      <tr>
+        <td><li>Unlimited</li></td>
+      </tr>
+      <tr> 
+        <td class="btn c"><button type="button" onclick="document.location='index1.html'">Sign up</button></td>
+      </tr>
+    </table>
+    </div>
+  </body>
+</html>
