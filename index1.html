@@ -5,36 +5,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/b7ac484fa2.js" crossorigin="anonymous"></script>
     <style>
       body {
         display: flex;
         justify-content: center;
         align-items: center;
       }
+      * {
+        font-weight: bold;
+      }
       .container {
+        margin-top: 50px;
         width: 300px;
+        max-width: 500px;
         margin: auto;
         border-radius: 10px;
         background-color: blue;
         padding: 5px;
       }
       input {
-        border-radius: 10px;
-        border: 1px solid black;
+        border:  none;
         height: 35px;
         width: 100%;
-        margin: 10px;
+        margin: 5px;
         border-left: none;
+      }
+      input:focus {
+        outline: none;
       }
       .int {
         display: flex;
+        background-color: white;
+        border-radius: 16px;
+        justify-content: center;
+        margin: auto;
+        width: 270px;
+        margin-bottom: 15px;
+      }
+      [type="submit"] {
+        display: flex;
+        justify-content: center;
+        width: 280px;
+        margin: auto;
+        padding: 3px;
+        border-radius: 10px;
+        height: 4em;
+        text-transform: capitalize;
+        background-color: black;
+        color: white;
+        opacity: 0.5;
+      }
+      .check {
+        display: flex;
+        align-items: center;
+      }
+      #remember {
+        width: 20px;
+      }
+      [type="submit"]:hover {
+        outline: 2px solid white;
+        opacity: 1;
+      }
+      .val:hover ~ [type="submit"] {
+        opacity: 1;
+        animation-name: moves;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        transform-origin: (90deg);
+      }
+      @keyframes moves {
+        0% {width: 280px;}
+        25% {width: 220px;}
+        50% {width: 200px;}
+        75% {width: 220px;}
+        100% {width: 280px;}
       }
       .icon {
         vertical-align: middle;
-        padding: 10px;
-        color: white;
+        position: relative;
+        top: 0px;
+        color: black;
         margin-top: 8px;
-        padding: 0;
+        padding: 5px;
+        font-size: 18px;
+      }
+      .first{
+        font-size: 100px;
+        display: block;
+        width: 120px;
+        text-align: center;
+        border: 2px solid white;
+        border-radius: 100px;
+        margin: auto;
+        margin-top: 10px;
+        padding: 20px;
+      }
+      #rem {
+        display: inline-block;
+        color: white;
       }
       label {
         font-weight: bold; 
@@ -44,6 +113,7 @@
   <body>
     <div class="container">
       <form autocomplete="on">
+        <i class="fas fa-user icon first"></i>
         <label for="uname">Username:</label><br/>
         <div class="int">
           <i class="fa fa-user icon"></i>
@@ -56,14 +126,19 @@
         </div>
         <label for="password">Password:</label><br/>
         <div class="int">
-          <i class="fa fa-key icon"></i>
-          <input type="text" id="uname" placeholder="********"><p/>
+          <i class="fas fa-key icon"></i>
+          <input type="password" id="uname" placeholder="********"><p/>
         </div>
-        <label for="password">Password:</label><br/>
-        <div class="int">
+        <label for="password">Re-enter Password:</label><br/>
+        <div class="int val">
           <i class="fa fa-key icon"></i>
-          <input type="text" id="uname" placeholder="********"><p/>
+          <input type="password" id="uname" placeholder="********"><p/>
         </div>
+        <div class="check">
+        <input type="checkbox" id="remember">
+        <label for="remember" id="rem">Remember</label>
+        </div>
+        <input type="submit" value="sign-up">
       </form>
     </div>
   </body>
