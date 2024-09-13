@@ -11,18 +11,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 100vh;
       }
       * {
         font-weight: bold;
       }
       .container {
-        margin-top: 50px;
-        width: 300px;
+        width: 350px;
         max-width: 500px;
         margin: auto;
-        border-radius: 10px;
+        border-radius: 15px;
         background-color: blue;
-        padding: 5px;
+        padding: 8px;
       }
       input {
         border:  none;
@@ -39,14 +39,14 @@
         background-color: white;
         border-radius: 16px;
         justify-content: center;
-        margin: auto;
-        width: 270px;
+        margin-left: 15px;
+        width: 90%;
         margin-bottom: 15px;
       }
       [type="submit"] {
         display: flex;
         justify-content: center;
-        width: 280px;
+        width: 100%;
         margin: auto;
         padding: 3px;
         border-radius: 10px;
@@ -63,23 +63,15 @@
       #remember {
         width: 20px;
       }
+      :checked {
+        accent-color: black;
+      }
       [type="submit"]:hover {
         outline: 2px solid white;
         opacity: 1;
       }
       .val:hover ~ [type="submit"] {
         opacity: 1;
-        animation-name: moves;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-        transform-origin: (90deg);
-      }
-      @keyframes moves {
-        0% {width: 280px;}
-        25% {width: 220px;}
-        50% {width: 200px;}
-        75% {width: 220px;}
-        100% {width: 280px;}
       }
       .icon {
         vertical-align: middle;
@@ -117,22 +109,23 @@
         <label for="uname">Username:</label><br/>
         <div class="int">
           <i class="fa fa-user icon"></i>
-          <input type="text" id="uname" placeholder="Nums code"><p/>
+          <input type="text" id="uname" placeholder="Nums code" required="required" autofocus="autofocus"><p/>
         </div>
         <label for="email">Email:</label><br/>
         <div class="int">
           <i class="fa fa-envelope icon"></i>
-          <input type="email" id="uname" placeholder="Numscode@gmail.com"><p/>
+          <input type="email" id="uname" placeholder="Numscode@gmail.com" required="required"><p/>
         </div>
         <label for="password">Password:</label><br/>
         <div class="int">
           <i class="fas fa-key icon"></i>
-          <input type="password" id="uname" placeholder="********"><p/>
+          <input type="password" placeholder="********" id="icon" required="required">
+          <i class="fa fa-eye icon" onclick="myfuntion()"></i><p/>
         </div>
         <label for="password">Re-enter Password:</label><br/>
         <div class="int val">
           <i class="fa fa-key icon"></i>
-          <input type="password" id="uname" placeholder="********"><p/>
+          <input type="password" id="uname" placeholder="********" required="required"><p/>
         </div>
         <div class="check">
         <input type="checkbox" id="remember">
@@ -141,5 +134,15 @@
         <input type="submit" value="sign-up">
       </form>
     </div>
+    <script>
+      function myfuntion() {
+        var x = document.getElementById("icon");
+        if(x.type === "password") {
+          x.type = "text";
+        } else {
+          x.type = "password"
+        }
+      }
+    </script>
   </body>
 </html>
